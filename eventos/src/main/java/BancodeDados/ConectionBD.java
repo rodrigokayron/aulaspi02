@@ -1,14 +1,14 @@
-package ifrn.pi.eventos.models;
+package BancodeDados;
 
 	import java.sql.Connection;
 	import java.sql.DriverManager;
 	import java.sql.SQLException;
 
-	public class ConexaoBanco {
+	public class ConectionBD {
 
 	    public static void main(String[] args) {
 	       
-	        String url = "jdbc:mysql://localhost:3306/eventos"; 
+	        String url = "jdbc:mysql://localhost:3306/eventos";
 	        String usuario = "root"; 
 	        String senha = "admin";   
 
