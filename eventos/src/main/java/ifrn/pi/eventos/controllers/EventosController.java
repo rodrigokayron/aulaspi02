@@ -95,4 +95,13 @@ public String salvarConvidado(@PathVariable Long idEvento, Convidado convidado) 
 	 }
 	 return "redirect:/eventos";
  }
+@PostMapping("/{idEvento}/convidados/{idConvidado}/remover")
+public String removerConvidado(@PathVariable Long idEvento, @PathVariable Long idConvidado) {
+    Optional<Convidado> optConvidado = cr.findById(idConvidado);
+    if (optConvidado.isPresent()) {
+        Convidado convidado = optConvidado.get();
+        cr.delete(convidado);
+    }
+    return "redirect:/eventos/" + idEvento;
+}
 }
