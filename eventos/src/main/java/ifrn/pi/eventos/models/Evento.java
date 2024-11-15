@@ -7,7 +7,12 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Evento {
-	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -16,13 +21,8 @@ public class Evento {
 	private String data;
 	private String horario;
 
-	public void setId(Long id) {
-		this.id = id;
-	}
-	public Long getId() {
-		return id;
-	}
-
+	
+	
 
 	public String getNome() {
 		return nome;
